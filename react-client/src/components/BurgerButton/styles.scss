@@ -1,11 +1,12 @@
 .burger-wrapper {
   background-color: white;
   cursor: pointer;
-
   display: flex;
+  width: 34px;
   flex-direction: column;
   gap: 8px;
-  width: 34px;
+  margin-top: auto;
+  margin-bottom: auto;
 
   .burger-line {
     background-color: black;
@@ -33,5 +34,11 @@
     &.bottom {
       transform: translateY(1.5px) rotate(-45deg);
     }
+  }
+}
+
+@media (min-width: 1100px) {
+  .burger-wrapper {
+    display: none;
   }
 }

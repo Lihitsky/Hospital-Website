@@ -1,11 +1,12 @@
 import { useState } from "react";
 import "./styles.scss";
 
-export const BurgerButton = () => {
-  const [isOpen, setIsOpen] = useState(false);
+export const BurgerButton = ({ isOpen, setIsOpen }) => {
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
-    setIsOpen(!isOpen);
+    setIsClicked(!isClicked);
+    setIsOpen(!isClicked);
   };
 
   return (
