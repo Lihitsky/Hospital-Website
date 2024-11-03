@@ -5,7 +5,7 @@ import { WhyUs } from "../../components/Sections/why-us/WhyUs";
 import { BookAppointment } from "../../components/Sections/book-appointment/BookAppointment";
 import { RecentNews } from "../../components/Sections/recent-news/RecentNews";
 import { Hero } from "../../components/Sections/hero/Hero";
-import { Header } from "../../components/header";
+import { Header } from "../../components/Header";
 
 function Home() {
   return (
