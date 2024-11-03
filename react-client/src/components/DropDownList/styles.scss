@@ -3,9 +3,6 @@
 .dropdown {
   padding: 15px;
   text-align: left;
-  z-index: 900;
-  margin-left: auto;
-  margin-right: auto;
   display: inline-block;
   position: relative;
 
@@ -38,18 +35,18 @@
   &-list {
     min-width: 200px;
     background: #ddd;
-    display: block;
+    display: none;
     position: absolute;
     background-color: #fff;
+    z-index: 100;
     border-radius: 6px;
     padding: 18px 16px;
     box-shadow: 0 13px 18px rgba(4, 69, 167, 0.26);
-    opacity: 0;
     transform: translateY(-10px);
     transition: opacity 0.3s, transform 0.3s;
 
     &.visible {
-      opacity: 1;
+      display: block;
       transform: translateY(0);
     }
   }
