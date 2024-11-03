@@ -1,0 +1,74 @@
+@use "../../styles/color.scss" as *;
+
+.header-wrapper {
+  z-index: 99;
+  border-bottom: 1px solid $border_color;
+  position: relative;
+}
+
+.header-top-bar {
+  display: flex;
+  border-bottom: 1px solid $border_color;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &-item {
+      display: flex;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      color: $text_color;
+      font-weight: 500;
+      opacity: 0.9;
+
+      :hover {
+        color: $accent_color;
+        transition: color 0.5s;
+      }
+    }
+  }
+
+  .social-media-link {
+    margin-left: 24px;
+
+    :hover {
+      transition: opacity 0.3s;
+      opacity: 0.7;
+    }
+  }
+}
+
+.header-bottom-bar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  nav {
+    margin-left: auto;
+  }
+
+  .logo {
+    text-decoration: none;
+    color: $titles_color;
+    font-size: 18px;
+    transition: transform 0.3s;
+
+    &:hover {
+      color: lighten($titles_color, 10%);
+      transform: scale(0.99);
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .header-bottom-bar nav {
+    display: none;
+  }
+}

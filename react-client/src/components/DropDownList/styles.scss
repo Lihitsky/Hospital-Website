@@ -1,0 +1,61 @@
+@use "../../styles/color.scss" as *;
+
+.dropdown {
+  padding: 15px;
+  text-align: left;
+  z-index: 900;
+  margin-left: auto;
+  margin-right: auto;
+  display: inline-block;
+  position: relative;
+
+  &-toggle {
+    cursor: pointer;
+    user-select: none;
+    color: $titles_color;
+    font-size: 16px;
+    font-weight: 500;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    transition: color 0.3s;
+    display: flex;
+
+    &-icon {
+      rotate: 90deg;
+      margin-left: 10px;
+      transition: transform 0.3s;
+
+      &.rotate {
+        transform: rotate(180deg);
+      }
+    }
+
+    &.current {
+      color: $accent_color;
+    }
+  }
+
+  &-list {
+    min-width: 200px;
+    background: #ddd;
+    display: block;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 18px 16px;
+    box-shadow: 0 13px 18px rgba(4, 69, 167, 0.26);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s, transform 0.3s;
+
+    &.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  :hover {
+    color: $accent_color;
+    transition: color 0.3s;
+  }
+}
