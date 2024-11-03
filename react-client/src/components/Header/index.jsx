@@ -8,6 +8,7 @@ import TwitterIcon from "../../assets/svg/twitter.svg";
 
 import "./styles.scss";
 import { Button } from "../Button";
+import { BurgerButton } from "../BurgerButton";
 
 const dropdownItems = [
   {
@@ -104,14 +105,7 @@ export const Header = () => {
           </nav>
 
           {/* For mobile */}
-          <div
-            id="w-node-_50020eae-abb3-e75c-0b85-e210a1b2bfb0-a1b2bf79"
-            className="menu-icon w-nav-button"
-          >
-            <div className="menu-icon-top-line"></div>
-            <div className="menu-icon-middle-line"></div>
-            <div className="menu-icon-bottom-line"></div>
-          </div>
+          <BurgerButton />
         </div>
       </div>
     </div>
