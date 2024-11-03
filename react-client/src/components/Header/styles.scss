@@ -1,7 +1,6 @@
 @use "../../styles/color.scss" as *;
 
 .header-wrapper {
-  z-index: 99;
   border-bottom: 1px solid $border_color;
   position: relative;
 }
@@ -50,7 +49,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  nav {
+  .navigation-wrapper {
     margin-left: auto;
   }
 
@@ -67,8 +66,36 @@
   }
 }
 
-@media (max-width: 990px) {
-  .header-bottom-bar nav {
+@media (max-width: 1100px) {
+  .navigation-wrapper {
     display: none;
+    min-width: 200px;
+    background: #ddd;
+    position: absolute;
+    top: 145px;
+    right: 25px;
+    background-color: #fff;
+    border-radius: 6px;
+    padding: 18px 16px;
+    box-shadow: 0 13px 18px rgba(4, 69, 167, 0.26);
+    opacity: 100;
+    transform: translateY(10px);
+    transition: opacity 0.3s, transform 0.3s;
+
+    &.visible {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .navigation-wrapper {
+    display: none;
+    min-width: 300px;
+    flex-direction: column;
+
+    &.visible {
+      display: flex;
+    }
   }
 }

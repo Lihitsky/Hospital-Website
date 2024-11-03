@@ -9,6 +9,7 @@ import TwitterIcon from "../../assets/svg/twitter.svg";
 import "./styles.scss";
 import { Button } from "../Button";
 import { BurgerButton } from "../BurgerButton";
+import { useState } from "react";
 
 const dropdownItems = [
   {
@@ -53,6 +54,8 @@ const dropdownItems = [
 ];
 
 export const Header = () => {
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+
   return (
     <div className="header-wrapper">
       <div className="container-default">
@@ -91,21 +94,31 @@ export const Header = () => {
             <br />
             ЧЕРНЯХІВСЬКОЇ СЕЛИЩНОЇ РАДИ
           </a>
-          <nav>
+          <nav
+            className={`navigation-wrapper ${isBurgerOpen ? "visible" : ""}`}
+          >
             <Link text="Головна" href="/" type="header" />
             <DropDownList
               title={dropdownItems[0].title}
               items={dropdownItems[0].items}
             />
+            <DropDownList
+              title={dropdownItems[1].title}
+              items={dropdownItems[1].items}
+            />
+            <DropDownList
+              title={dropdownItems[2].title}
+              items={dropdownItems[2].items}
+            />
             <Button
               text="Зв'язатися з нами"
-              style={{ marginLeft: 25 }}
+              style={!isBurgerOpen ? { marginLeft: 25 } : { marginTop: 15 }}
               href="/contact"
             />
           </nav>
 
           {/* For mobile */}
-          <BurgerButton />
+          <BurgerButton isOpen={isBurgerOpen} setIsOpen={setIsBurgerOpen} />
         </div>
       </div>
     </div>
