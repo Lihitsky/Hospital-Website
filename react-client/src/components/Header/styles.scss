@@ -61,7 +61,6 @@
     transition: transform 0.3s;
 
     &:hover {
-      color: lighten($titles_color, 10%);
       transform: scale(0.99);
     }
   }

@@ -4,7 +4,7 @@ import { OurServices } from "../../components/Sections/OurServices";
 import { WhyUs } from "../../components/Sections/WhyUs";
 import { BookAppointment } from "../../components/Sections/BookAppointment";
 import { RecentNews } from "../../components/Sections/RecentNews";
-import { Hero } from "../../components/Sections/Hero";
+import { Hero } from "../../components/Sections/Heros";
 import { Header } from "../../components/Header";
 
 function Home() {
