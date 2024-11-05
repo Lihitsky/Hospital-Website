@@ -1,49 +1,37 @@
-import React from "react";
+import BackgroundObj1Image from "../../../assets/svg/background-object-1-hero.svg";
+import BackgroundObj2Image from "../../../assets/svg/background-object-2-hero.svg";
+import { Button } from "../../Button";
+
+import "./styles.scss";
 
 export const Hero = () => {
   return (
-    <div id="Hero" className="full-image-section">
-      <div className="container-default w-container">
-        <div className="w-layout-grid split-section-grid">
-          <div
-            id="w-node-af684ee7-055e-79ef-1b13-d5aa208aae56-0b1ddc26"
-            className="split-column content"
-          >
-            <div className="justify-column hero">
-              <div className="subheading-wrapper">
-                <div className="subheading accent">Hospital Center</div>
-                <div className="sufix-line"></div>
-              </div>
-              <h1>Healthcare for Family’s Health</h1>
-              <p className="large-paragraph">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
-                mauris nulla tincidunt fermentum. Sagittis pellentesque.
-              </p>
-              <div className="mg-top-32px">
-                <a href="/contact" className="button-primary large w-button">
-                  Book an Appointment
-                </a>
-              </div>
+    <div className="hero-section">
+      <div className="container-default">
+        <div className="hero-content">
+          <div className="hero-text">
+            <div className="subheading-section">
+              <div className="subheading-text">Травматологічне відділення</div>
+              <div className="subheading-line"></div>
             </div>
+            <h1>Дбаємо про здоров’я вашої родини</h1>
+            <p className="hero-description">
+              Ми спеціалізуємося на швидкій та професійній допомозі при травмах
+              будь-якої складності. Наша команда лікарів забезпечує повний
+              спектр медичних послуг – від первинної діагностики до
+              реабілітації. Ми використовуємо сучасні методи лікування, щоб ваш
+              шлях до одужання був безпечним і комфортним.
+            </p>
+            <Button text="Детальніше про нас" style={{ marginTop: 15 }} />
           </div>
-          <div className="split-column image hero">
-            <div style={{ opacity: "0" }} className="bg-object-1---hero">
-              <img
-                src="https://cdn.prod.website-files.com/5e30f06b05f79621331ddc25/5e310425e800ca41f276c5f9_background-object-1-hero.svg"
-                alt=""
-              />
+          <div className="hero-image-container">
+            <div className="hero-bg-object hero-bg-object-1">
+              <img src={BackgroundObj1Image} />
             </div>
-            <div style={{ opacity: "0" }} className="bg-object-2---hero">
-              <img
-                src="https://cdn.prod.website-files.com/5e30f06b05f79621331ddc25/5e310615cf36f636714a14ee_background-object-2-hero.svg"
-                alt=""
-              />
+            <div className="hero-bg-object hero-bg-object-2">
+              <img src={BackgroundObj2Image} />
             </div>
-            <div className="transition-bg-image hero"></div>
-            <div
-              style={{ display: "block" }}
-              className="transition-bg-solid"
-            ></div>
+            <div className="hero-transition-bg"></div>
           </div>
         </div>
       </div>

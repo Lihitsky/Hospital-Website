@@ -4,7 +4,7 @@ import { OurServices } from "../../components/Sections/our-services/OurServices"
 import { WhyUs } from "../../components/Sections/why-us/WhyUs";
 import { BookAppointment } from "../../components/Sections/book-appointment/BookAppointment";
 import { RecentNews } from "../../components/Sections/recent-news/RecentNews";
-import { Hero } from "../../components/Sections/hero/Hero";
+import { Hero } from "../../components/Sections/Hero/Hero";
 import { Header } from "../../components/Header";
 
 function Home() {
@@ -12,8 +12,8 @@ function Home() {
     <div>
       <div className="page-wrapper">
         <Header />
-        {/* <Hero />
-        <ContactBar />
+        <Hero />
+        {/* <ContactBar />
         <AboutUs />
         <WhyUs />
         <OurServices />

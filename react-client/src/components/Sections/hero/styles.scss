@@ -1,0 +1,90 @@
+@use "../../../styles/color.scss" as *;
+@use "../../../styles/animations.scss" as *;
+
+.hero-section {
+  position: relative;
+  background-color: $background_color;
+}
+
+.hero-content {
+  min-height: 820px;
+  display: flex;
+}
+
+.hero-text {
+  max-width: 450px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  .subheading-section {
+    display: flex;
+    align-items: flex-end;
+    @include animation(fadeInDown, 2s);
+
+    .subheading-text {
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      line-height: 22px;
+      color: $accent_color;
+      display: inline-block;
+    }
+
+    .subheading-line {
+      width: 25px;
+      height: 3px;
+      background-color: $accent_color;
+      margin-bottom: 7px;
+      margin-left: 8px;
+      display: inline-block;
+    }
+  }
+
+  h1 {
+    @include animation(slideInLeft, 1s);
+  }
+
+  .hero-description {
+    font-family: 14px;
+    color: $text_color;
+    @include animation(slideInLeft, 1.5s);
+  }
+}
+
+.hero-image-container {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+
+  .hero-bg-object {
+    position: absolute;
+    z-index: 1;
+
+    &.hero-bg-object-1 {
+      width: 100px;
+      left: -74px;
+      top: 62px;
+      @include animation(fadeInDown, 1s);
+    }
+
+    &.hero-bg-object-2 {
+      width: 100px;
+      left: -74px;
+      bottom: 62px;
+      @include animation(fadeInUp, 1s);
+    }
+  }
+
+  .hero-transition-bg {
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-image: url("../../../assets/images/hero-image.jpg");
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include animation(blurIn, 1.5s);
+  }
+}
