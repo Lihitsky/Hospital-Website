@@ -99,3 +99,30 @@
     }
   }
 }
+
+@media (max-width: 560px) {
+  .header-top-bar {
+    display: none;
+  }
+
+  .navigation-wrapper {
+    top: 75px;
+  }
+}
+
+@media (max-width: 420px) {
+  .header-bottom-bar {
+    .logo {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 340px) {
+  .header-bottom-bar {
+    .navigation-wrapper {
+      min-width: 250px;
+      top: 88px;
+    }
+  }
+}

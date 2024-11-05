@@ -1,3 +1,6 @@
+import { Button } from "../Button";
+import { BurgerButton } from "../BurgerButton";
+import { useState } from "react";
 import { DropDownList } from "../DropDownList";
 import { Link } from "../Link";
 
@@ -7,9 +10,6 @@ import FacebookIcon from "../../assets/svg/facebook.svg";
 import TwitterIcon from "../../assets/svg/twitter.svg";
 
 import "./styles.scss";
-import { Button } from "../Button";
-import { BurgerButton } from "../BurgerButton";
-import { useState } from "react";
 
 const dropdownItems = [
   {
