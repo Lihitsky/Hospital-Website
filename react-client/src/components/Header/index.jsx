@@ -112,7 +112,7 @@ export const Header = () => {
             />
             <Button
               text="Зв'язатися з нами"
-              style={!isBurgerOpen ? { marginLeft: 25 } : { marginTop: 15 }}
+              style={!isBurgerOpen ? { marginLeft: 35 } : { marginTop: 15 }}
               href="/contact"
             />
           </nav>

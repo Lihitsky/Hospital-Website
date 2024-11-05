@@ -1,6 +1,8 @@
 @use "../../styles/color.scss" as *;
 
 .button {
+  cursor: pointer;
+
   &.primary {
     border: 2px solid $accent_color;
     background-color: $accent_color;

@@ -3,6 +3,7 @@
 .header-wrapper {
   border-bottom: 1px solid $border_color;
   position: relative;
+  background-color: $background_color;
 }
 
 .header-top-bar {
@@ -100,7 +101,7 @@
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 575px) {
   .header-top-bar {
     display: none;
   }
