@@ -13,8 +13,8 @@ function Home() {
       <div className="page-wrapper">
         <Header />
         <Hero />
-        {/* <ContactBar />
-        <AboutUs />
+        <ContactBar />
+        {/* <AboutUs />
         <WhyUs />
         <OurServices />
         <BookAppointment />

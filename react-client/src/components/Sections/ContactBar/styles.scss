@@ -1,0 +1,106 @@
+@use "../../../styles/color.scss" as *;
+
+.contact-bar-section {
+  background-color: $background_grey;
+  padding-top: 80px;
+  padding-bottom: 60px;
+
+  .contact-bar-wrapper {
+    z-index: 6;
+    max-width: 90%;
+    background-color: $white_color;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    margin-top: -140px;
+    padding: 48px 24px 43px;
+    position: relative;
+    box-shadow: 4px 0 36px rgba(140, 170, 205, 0.16);
+
+    .contact-bar-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+      gap: 100px;
+
+      .contact-bar-item {
+        display: flex;
+
+        .contact-bar-icon {
+          height: 42px;
+        }
+
+        .contact-bar-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-left: 25px;
+
+          .contact-bar-title {
+            text-wrap: nowrap;
+            color: $titles_color;
+            margin-bottom: 22px;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 1.2em;
+          }
+
+          .contact-bar-link {
+            text-wrap: nowrap;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1170px) {
+  .contact-bar-section {
+    .contact-bar-wrapper {
+      max-width: 100%;
+
+      .contact-bar-container {
+        gap: 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1030px) {
+  .contact-bar-section {
+    padding-top: 215px;
+  }
+}
+
+@media (max-width: 980px) {
+  .contact-bar-section {
+    padding-top: 315px;
+
+    .contact-bar-wrapper {
+      .contact-bar-container {
+        gap: 50px;
+      }
+    }
+  }
+}
+
+@media (max-width: 335px) {
+  .contact-bar-section {
+    padding-top: 355px;
+
+    .contact-bar-wrapper {
+      .contact-bar-container {
+        .contact-bar-item {
+          .contact-bar-icon {
+            height: 36px;
+          }
+
+          .contact-bar-info {
+            margin-left: 18px;
+          }
+        }
+      }
+    }
+  }
+}
