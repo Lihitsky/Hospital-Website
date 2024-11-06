@@ -14,8 +14,8 @@ function Home() {
         <Header />
         <Hero />
         <ContactBar />
-        {/* <AboutUs />
-        <WhyUs />
+        <AboutUs />
+        {/* <WhyUs />
         <OurServices />
         <BookAppointment />
         <RecentNews /> */}
