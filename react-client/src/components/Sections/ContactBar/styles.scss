@@ -72,6 +72,10 @@
 @media (max-width: 1030px) {
   .contact-bar-section {
     padding-top: 215px;
+
+    .contact-bar-wrapper {
+      box-shadow: 4px 0 36px rgba(140, 170, 205, 0.4);
+    }
   }
 }
 
