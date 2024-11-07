@@ -15,8 +15,8 @@ function Home() {
         <Hero />
         <ContactBar />
         <AboutUs />
-        {/* <WhyUs />
-        <OurServices />
+        <WhyUs />
+        {/* <OurServices />
         <BookAppointment />
         <RecentNews /> */}
       </div>

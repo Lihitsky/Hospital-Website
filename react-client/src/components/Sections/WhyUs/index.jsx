@@ -1,47 +1,33 @@
-import React from "react";
+import { Button } from "../../Button";
+
+import BackgroundObjImage from "../../../assets/svg/background-object-1-why-us.svg";
+
+import "./styles.scss";
 
 export const WhyUs = () => {
   return (
-    <div className="section section-why-us">
-      <div className="container-default w-container">
-        <div className="w-layout-grid split-section-grid">
-          <div className="hidden-tablet"></div>
-          <div
-            id="w-node-adf76295-6499-d943-66f9-d1bce0d3c982-0b1ddc26"
-            className="split-column image why-us"
-          >
-            <div className="background-object-why-us">
-              <img
-                src="https://cdn.prod.website-files.com/5e30f06b05f79621331ddc25/5e31218be800ca63e977d7d8_background-object-why-us.svg"
-                alt=""
-              />
+    <div className="why-us-section">
+      <div className="container-default">
+        <div className="why-us-content">
+          <div className="why-us-text">
+            <div className="subheading-section">
+              <div className="subheading-text">Чому ми</div>
+              <div className="subheading-line"></div>
             </div>
-            <div className="transition-bg-image why-us"></div>
-            <div
-              style={{ display: "block" }}
-              className="transition-bg-solid about-us"
-            ></div>
+            <h2>Ваше здоров’я – наш пріоритет</h2>
+            <p className="why-us-description">
+              Ми пропонуємо інноваційні медичні рішення, професійну команду та
+              сучасне обладнання, що відповідає світовим стандартам. Наша мета –
+              забезпечити максимально комфортні умови лікування та підтримку на
+              кожному етапі відновлення.
+            </p>
+            <Button text="Дізнатися більше" style={{ marginTop: 15 }} />
           </div>
-          <div
-            id="w-node-adf76295-6499-d943-66f9-d1bce0d3c975-0b1ddc26"
-            className="split-column content"
-          >
-            <div className="justify-column">
-              <div className="subheading-wrapper">
-                <div className="subheading">Why Us</div>
-                <div className="sufix-line"></div>
-              </div>
-              <h2>Your Well-Being is our Main Priority.</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non
-                mauris nulla tincidunt fermentum. Sagittis pellentesque.
-              </p>
-              <div className="mg-top-32px">
-                <a href="/about" className="button-primary default w-button">
-                  Why Us
-                </a>
-              </div>
+          <div className="why-us-image-container">
+            <div className="why-us-bg-object why-us-bg-object-1">
+              <img src={BackgroundObjImage} alt="Background decoration 1" />
             </div>
+            <div className="why-us-transition-bg"></div>
           </div>
         </div>
       </div>
