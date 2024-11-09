@@ -1,10 +1,19 @@
+import mainPhotoLA from "../assets/images/LA-portrait-main.png";
+import photoLA from "../assets/images/LA-portrait.jpg";
+import mainPhotoLB from "../assets/images/LB-portrait-main.png";
+import photoLB from "../assets/images/LB-portrait.jpg";
+import mainPhotoKO from "../assets/images/KO-portrait-main.png";
+import photoKO from "../assets/images/KO-portrait.jpg";
+import mainPhotoKG from "../assets/images/KG-portrait-main.png";
+import photoKG from "../assets/images/KG-portrait.jpg";
+
 export const DOCTORS = [
   {
     name: "Луганський Андрій Григорович",
     position: "Директор",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "./assets/images/LA-portrait-main.png",
-    photoUrl: "./assets/images/LA-portrait.jpg",
+    mainPhotoUrl: mainPhotoLA,
+    photoUrl: photoLA,
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
@@ -29,8 +38,8 @@ export const DOCTORS = [
     name: "Ліхіцький Богдан Юрійович",
     position: "Завідувач відділення",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "./assets/images/LB-portrait-main.png",
-    photoUrl: "./assets/images/LB-portrait.jpg",
+    mainPhotoUrl: mainPhotoLB,
+    photoUrl: photoLB,
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
@@ -55,8 +64,8 @@ export const DOCTORS = [
     name: "Кратюк Олександр Олександрович",
     position: "Лікарь Ортопед-травматолог",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "./assets/images/LB-portrait-main.png",
-    photoUrl: "./assets/images/KO-portrait.jpg",
+    mainPhotoUrl: mainPhotoKO,
+    photoUrl: photoKO,
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
@@ -81,8 +90,8 @@ export const DOCTORS = [
     name: "Козел Ганна Вікторівна",
     position: "Лікарь Ортопед-травматолог",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "./assets/images/KG-portrait-main.png",
-    photoUrl: "./assets/images/KG-portrait.jpg",
+    mainPhotoUrl: mainPhotoKG,
+    photoUrl: photoKG,
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
