@@ -62,7 +62,7 @@
 
     &.why-us-bg-object-1 {
       width: 40px;
-      left: 825px;
+      right: -40px;
       top: 40px;
       @include animation(fadeInDown, 1s);
     }
@@ -126,6 +126,7 @@
       bottom: 25px;
       left: 25px;
       right: 25px;
+      max-height: 525px;
     }
   }
 }

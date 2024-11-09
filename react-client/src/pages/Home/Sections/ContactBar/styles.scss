@@ -2,6 +2,7 @@
 @use "../../../../styles/animations.scss" as *;
 
 .contact-bar-section {
+  position: relative;
   background-color: $background_grey;
   padding-top: 80px;
   padding-bottom: 100px;
@@ -81,8 +82,6 @@
 
 @media (max-width: 980px) {
   .contact-bar-section {
-    padding-top: 315px;
-
     .contact-bar-wrapper {
       .contact-bar-container {
         gap: 50px;

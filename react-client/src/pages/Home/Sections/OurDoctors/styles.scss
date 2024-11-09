@@ -1,0 +1,115 @@
+@use "../../../../styles/color.scss" as *;
+@use "../../../../styles/animations.scss" as *;
+
+.our-doctors-section {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-color: $background_color;
+}
+
+.container-default {
+  max-width: 1520px !important;
+}
+
+.our-doctors-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+
+  .our-doctors-subheading {
+    color: $text_color;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .our-doctors-header {
+    margin: 0;
+  }
+
+  .our-doctors-description {
+    color: $text_color;
+    text-align: center;
+    max-width: 480px;
+  }
+}
+
+.our-doctors-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  padding-top: 40px;
+
+  .list-item-card {
+    box-shadow: 0 3px 6px 0 rgba(155, 188, 232, 0.29);
+    background-color: #fff;
+    border: 1px solid #f0f5f8;
+    border-radius: 8px;
+    transition: 0.5s;
+
+    .item-image-container {
+      max-height: 440px;
+      overflow: hidden;
+      align-items: center;
+
+      img {
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
+      }
+    }
+
+    .item-text-container {
+      padding: 32px 24px 40px;
+
+      .item-title {
+        margin-top: 0;
+        margin-bottom: 4px;
+        font-size: 16px;
+        line-height: 29px;
+      }
+
+      .item-position {
+        color: $accent_color;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+
+      .item-description {
+        color: $text_color;
+        line-height: 1.4em;
+        margin-bottom: 20px;
+      }
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .our-doctors-list {
+    grid-template-columns: 1fr 1fr;
+
+    .list-item-card {
+      .item-image-container {
+        max-height: 600px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .our-doctors-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 385px) {
+  .our-doctors-section {
+    margin-top: 50px;
+  }
+}

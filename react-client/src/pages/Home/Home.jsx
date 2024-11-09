@@ -1,6 +1,6 @@
 import { AboutUs } from "./Sections/AboutUs";
 import { ContactBar } from "./Sections/ContactBar";
-import { OurServices } from "./Sections/OurServices";
+import { OurDoctors } from "./Sections/OurDoctors";
 import { WhyUs } from "./Sections/WhyUs";
 import { BookAppointment } from "./Sections/BookAppointment";
 import { RecentNews } from "./Sections/RecentNews";
@@ -16,8 +16,8 @@ function Home() {
         <ContactBar />
         <AboutUs />
         <WhyUs />
-        {/* <OurServices />
-        <BookAppointment />
+        <OurDoctors />
+        {/* <BookAppointment />
         <RecentNews /> */}
       </div>
     </div>
