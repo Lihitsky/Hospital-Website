@@ -1,6 +1,6 @@
-import { Button } from "../../Button";
+import { Button } from "../../../../components/Button";
 
-import BackgroundObjImage from "../../../assets/svg/background-object-1-why-us.svg";
+import BackgroundObjImage from "../../../../assets/svg/background-object-1-why-us.svg";
 
 import "./styles.scss";
 

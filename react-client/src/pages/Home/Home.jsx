@@ -1,10 +1,10 @@
-import { AboutUs } from "../../components/Sections/AboutUs";
-import { ContactBar } from "../../components/Sections/ContactBar";
-import { OurServices } from "../../components/Sections/OurServices";
-import { WhyUs } from "../../components/Sections/WhyUs";
-import { BookAppointment } from "../../components/Sections/BookAppointment";
-import { RecentNews } from "../../components/Sections/RecentNews";
-import { Hero } from "../../components/Sections/Hero";
+import { AboutUs } from "./Sections/AboutUs";
+import { ContactBar } from "./Sections/ContactBar";
+import { OurServices } from "./Sections/OurServices";
+import { WhyUs } from "./Sections/WhyUs";
+import { BookAppointment } from "./Sections/BookAppointment";
+import { RecentNews } from "./Sections/RecentNews";
+import { Hero } from "./Sections/Hero";
 import { Header } from "../../components/Header";
 
 function Home() {

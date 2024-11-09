@@ -1,6 +1,6 @@
-import PhoneIcon from "../../../assets/svg/contact-bar-phone.svg";
-import ClockIcon from "../../../assets/svg/contact-bar-clock.svg";
-import MedicineIcon from "../../../assets/svg/contact-bar-medicine.svg";
+import PhoneIcon from "../../../../assets/svg/contact-bar-phone.svg";
+import ClockIcon from "../../../../assets/svg/contact-bar-clock.svg";
+import MedicineIcon from "../../../../assets/svg/contact-bar-medicine.svg";
 
 import "./styles.scss";
 

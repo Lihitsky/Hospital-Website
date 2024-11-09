@@ -1,5 +1,5 @@
-@use "../../../styles/color.scss" as *;
-@use "../../../styles/animations.scss" as *;
+@use "../../../../styles/color.scss" as *;
+@use "../../../../styles/animations.scss" as *;
 
 .why-us-section {
   position: relative;
@@ -61,9 +61,9 @@
     position: absolute;
 
     &.why-us-bg-object-1 {
-      width: 130px;
-      left: -45px;
-      top: -30px;
+      width: 40px;
+      left: 825px;
+      top: 40px;
       @include animation(fadeInDown, 1s);
     }
   }
@@ -74,7 +74,7 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
-    background-image: url("../../../assets/images/why-us-image.jpg");
+    background-image: url("../../../../assets/images/why-us-image.jpg");
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;

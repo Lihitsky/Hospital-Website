@@ -1,6 +1,6 @@
-import BackgroundObj1Image from "../../../assets/svg/background-object-1-hero.svg";
-import BackgroundObj2Image from "../../../assets/svg/background-object-2-hero.svg";
-import { Button } from "../../Button";
+import BackgroundObj1Image from "../../../../assets/svg/background-object-1-hero.svg";
+import BackgroundObj2Image from "../../../../assets/svg/background-object-2-hero.svg";
+import { Button } from "../../../../components/Button";
 
 import "./styles.scss";
 

@@ -1,5 +1,5 @@
-@use "../../../styles/color.scss" as *;
-@use "../../../styles/animations.scss" as *;
+@use "../../../../styles/color.scss" as *;
+@use "../../../../styles/animations.scss" as *;
 
 .about-section {
   position: relative;
@@ -73,7 +73,7 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
-    background-image: url("../../../assets/images/about-image.jpg");
+    background-image: url("../../../../assets/images/about-image.jpg");
     background-position: 50% 0;
     background-repeat: no-repeat;
     background-size: cover;
