@@ -3,8 +3,8 @@ export const DOCTORS = [
     name: "Луганський Андрій Григорович",
     position: "Директор",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "/src/assets/images/LA-portrait-main.png",
-    photoUrl: "/src/assets/images/LA-portrait.jpg",
+    mainPhotoUrl: "./src/assets/images/LA-portrait-main.png",
+    photoUrl: "./src/assets/images/LA-portrait.jpg",
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
@@ -29,8 +29,8 @@ export const DOCTORS = [
     name: "Ліхіцький Богдан Юрійович",
     position: "Завідувач відділення",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "/src/assets/images/LB-portrait-main.png",
-    photoUrl: "/src/assets/images/LB-portrait.jpg",
+    mainPhotoUrl: "./src/assets/images/LB-portrait-main.png",
+    photoUrl: "./src/assets/images/LB-portrait.jpg",
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
@@ -55,8 +55,8 @@ export const DOCTORS = [
     name: "Кратюк Олександр Олександрович",
     position: "Лікарь Ортопед-травматолог",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "/src/assets/images/LB-portrait-main.png",
-    photoUrl: "/src/assets/images/KO-portrait.jpg",
+    mainPhotoUrl: "./src/assets/images/LB-portrait-main.png",
+    photoUrl: "./src/assets/images/KO-portrait.jpg",
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
@@ -81,8 +81,8 @@ export const DOCTORS = [
     name: "Козел Ганна Вікторівна",
     position: "Лікарь Ортопед-травматолог",
     specialty: "Ортопед-травматолог",
-    mainPhotoUrl: "/src/assets/images/KG-portrait-main.png",
-    photoUrl: "/src/assets/images/KG-portrait.jpg",
+    mainPhotoUrl: "./src/assets/images/KG-portrait-main.png",
+    photoUrl: "./src/assets/images/KG-portrait.jpg",
     education: [
       "Львівський національний медичний університет ім. Данила Галицького",
       "Інтернатура в Київській медичній академії",
