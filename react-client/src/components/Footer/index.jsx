@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Footer = () => {
   return (
     <div className="footer-wrapper">
@@ -90,55 +88,6 @@ export const Footer = () => {
               <li className="footer-menu-item">
                 <a href="/contact" className="footer-link">
                   Contact Us
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-column">
-            <h4 className="footer-title">Utility Pages</h4>
-            <ul role="list" className="footer-menu">
-              <li className="footer-menu-item">
-                <a href="/utility-pages/styleguide" className="footer-link">
-                  Styleguide
-                </a>
-              </li>
-              <li className="footer-menu-item">
-                <a href="/utility-pages/licenses" className="footer-link">
-                  Licenses
-                </a>
-              </li>
-              <li className="footer-menu-item">
-                <a
-                  href="https://medicatemplate.webflow.io/401"
-                  className="footer-link"
-                >
-                  Password Protected
-                </a>
-              </li>
-              <li className="footer-menu-item">
-                <a
-                  href="https://medicatemplate.webflow.io/404"
-                  className="footer-link"
-                >
-                  404 Not Found Page
-                </a>
-              </li>
-              <li className="footer-menu-item">
-                <a href="/utility-pages/start-here" className="footer-link">
-                  Start Here
-                </a>
-              </li>
-              <li className="footer-menu-item">
-                <a href="/utility-pages/changelog" className="footer-link">
-                  Changelog
-                </a>
-              </li>
-              <li className="footer-menu-item">
-                <a
-                  href="https://brixtemplates.com/more-webflow-templates"
-                  className="footer-link special"
-                >
-                  More Webflow Templates
                 </a>
               </li>
             </ul>
