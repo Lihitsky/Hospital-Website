@@ -1,0 +1,59 @@
+@use "../../styles/color.scss" as *;
+
+.footer-wrapper {
+  border-bottom: 1px solid $border_color;
+  position: relative;
+  background-color: $background_color;
+}
+
+.footer-bar {
+  display: flex;
+  border-top: 1px solid $border_color;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .contact-info {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &-item {
+      display: flex;
+      gap: 8px;
+      text-decoration: none;
+      font-size: 16px;
+      color: $text_color;
+      font-weight: 500;
+      opacity: 0.9;
+
+      :hover {
+        color: $accent_color;
+        transition: color 0.5s;
+      }
+    }
+  }
+  .social-media {
+    display: flex;
+    gap: 24px;
+
+    .social-media-link {
+      :hover {
+        transition: opacity 0.3s;
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .footer-bar {
+    flex-direction: column-reverse;
+
+    .contact-info {
+      flex-direction: column;
+      align-items: start;
+      margin-top: 30px;
+    }
+  }
+}

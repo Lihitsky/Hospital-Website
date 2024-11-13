@@ -34,9 +34,10 @@ const ScrollToTopButton = () => {
 };
 
 const buttonStyle = {
+  cursor: "pointer",
+  zIndex: 100,
   position: "fixed",
-  transform: "rotate(90deg)",
-  bottom: "30px",
+  bottom: "80px",
   right: "30px",
   padding: "20px 20px",
   fontSize: "24px",
@@ -44,7 +45,7 @@ const buttonStyle = {
   color: "#fff",
   border: "none",
   borderRadius: "5px",
-  cursor: "pointer",
+  transform: "rotate(90deg)",
   boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2)",
 };
 

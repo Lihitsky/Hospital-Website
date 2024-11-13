@@ -6,6 +6,7 @@ import { BookAppointment } from "./Sections/BookAppointment";
 import { RecentNews } from "./Sections/RecentNews";
 import { Hero } from "./Sections/Hero";
 import { Header } from "../../components/Header";
+import { Footer } from "../../components/Footer";
 
 function Home() {
   return (
@@ -17,6 +18,7 @@ function Home() {
         <AboutUs />
         <WhyUs />
         <OurDoctors />
+        <Footer />
         {/* <BookAppointment />
         <RecentNews /> */}
       </div>
