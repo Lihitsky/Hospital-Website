@@ -2,21 +2,34 @@
 
 .button {
   cursor: pointer;
+  padding: 15px 20px;
+  color: $white_color;
+  text-align: center;
+  border-radius: 4px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: border-color 0.3s, transform 0.3s, background-color 0.3s;
 
   &.primary {
     border: 2px solid $accent_color;
     background-color: $accent_color;
-    padding: 15px 20px;
-    color: $white_color;
-    text-align: center;
-    border-radius: 4px;
-    font-weight: 700;
-    text-decoration: none;
-    transition: border-color 0.3s, transform 0.3s, background-color 0.3s;
 
     &:hover {
       background-color: $accent_hover_color;
       border-color: $accent_hover_color;
+      transform: translateY(-5px);
+    }
+  }
+
+  &.secondary {
+    color: $accent_color;
+    border: 2px solid $accent_color;
+    background-color: $white_color;
+
+    &:hover {
+      color: $white_color;
+      background-color: $accent_color;
+      border-color: $accent_color;
       transform: translateY(-5px);
     }
   }

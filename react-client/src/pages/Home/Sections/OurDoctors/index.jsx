@@ -28,6 +28,7 @@ export const OurDoctors = () => {
                 <Button
                   text={"Дізнатись більше"}
                   style={{ width: "100%", marginTop: "auto" }}
+                  type="secondary"
                 />
               </div>
             </div>
