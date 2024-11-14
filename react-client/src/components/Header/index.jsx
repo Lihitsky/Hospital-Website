@@ -10,22 +10,18 @@ import FacebookIcon from "../../assets/svg/facebook.svg";
 import TwitterIcon from "../../assets/svg/twitter.svg";
 
 import "./styles.scss";
+import { DOCTORS } from "../../constants/data";
+
+const doctorDropdownItems = DOCTORS.map((doctor) => ({
+  text: doctor.name,
+  href: `/doctor/${doctor.routeName}`,
+}));
 
 const dropdownItems = [
   {
     id: 1,
     title: "Лікарі",
-    items: [
-      {
-        text: "Д-р Олександра Шевченко",
-        href: "/doctors/oleksandra-shevchenko",
-      },
-      { text: "Д-р Іван Коваль", href: "/doctors/ivan-koval" },
-      {
-        text: "Д-р Наталія Бондаренко",
-        href: "/doctors/nataliya-bondarenko",
-      },
-    ],
+    items: doctorDropdownItems,
   },
   {
     id: 2,
@@ -89,7 +85,7 @@ export const Header = () => {
       {/* Nav menu Bar */}
       <div className="container-default">
         <div className="header-bottom-bar">
-          <a href="/home" className="logo">
+          <a href="/" className="logo">
             <b>КНП "Черняхівське ТМО"</b>
             <br />
             ЧЕРНЯХІВСЬКОЇ СЕЛИЩНОЇ РАДИ

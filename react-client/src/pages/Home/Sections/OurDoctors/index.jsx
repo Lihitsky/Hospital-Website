@@ -1,5 +1,5 @@
 import { Button } from "../../../../components/Button";
-import { DOCTORS } from "../../../../constants";
+import { DOCTORS } from "../../../../constants/data";
 
 import "./styles.scss";
 
@@ -27,6 +27,7 @@ export const OurDoctors = () => {
                 <p className="item-description">{doctor.quote}</p>
                 <Button
                   text={"Дізнатись більше"}
+                  href={`doctor/${doctor.routeName}`}
                   style={{ width: "100%", marginTop: "auto" }}
                   type="secondary"
                 />

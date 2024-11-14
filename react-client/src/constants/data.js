@@ -10,6 +10,7 @@ import photoKG from "../assets/images/KG-portrait.jpg";
 export const DOCTORS = [
   {
     name: "Луганський Андрій Григорович",
+    routeName: "luganskyi-andrii-hryhorovych",
     position: "Директор",
     specialty: "Ортопед-травматолог",
     mainPhotoUrl: mainPhotoLA,
@@ -36,6 +37,7 @@ export const DOCTORS = [
   },
   {
     name: "Ліхіцький Богдан Юрійович",
+    routeName: "likytskyi-bohdan-yuriiovych",
     position: "Завідувач відділення",
     specialty: "Ортопед-травматолог",
     mainPhotoUrl: mainPhotoLB,
@@ -62,6 +64,7 @@ export const DOCTORS = [
   },
   {
     name: "Кратюк Олександр Олександрович",
+    routeName: "kratyuk-oleksandr-oleksandrovych",
     position: "Лікарь Ортопед-травматолог",
     specialty: "Ортопед-травматолог",
     mainPhotoUrl: mainPhotoKO,
@@ -88,6 +91,7 @@ export const DOCTORS = [
   },
   {
     name: "Козел Ганна Вікторівна",
+    routeName: "kozel-hanna-viktorivna",
     position: "Лікарь Ортопед-травматолог",
     specialty: "Ортопед-травматолог",
     mainPhotoUrl: mainPhotoKG,
