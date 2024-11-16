@@ -1,0 +1,124 @@
+@use "../../styles/color.scss" as *;
+@use "../../styles/animations.scss" as *;
+
+.doctor-section {
+  position: relative;
+  background-color: $background_grey;
+}
+
+.doctor-content {
+  min-height: 820px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row-reverse;
+}
+
+.doctor-text {
+  max-width: 450px;
+  margin-top: auto;
+  margin-bottom: auto;
+
+  .subheading-section {
+    display: flex;
+    align-items: flex-end;
+    @include animation(fadeInDown, 1.5s);
+
+    .subheading-text {
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      line-height: 22px;
+      color: $text_color;
+      display: inline-block;
+    }
+
+    .subheading-line {
+      width: 25px;
+      height: 3px;
+      background-color: $accent_color;
+      margin-bottom: 7px;
+      margin-left: 8px;
+      display: inline-block;
+    }
+  }
+
+  h2 {
+    @include animation(slideInRight, 0.5s);
+  }
+
+  .doctor-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    .contact-ring {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      padding: 5px;
+      border-radius: 100%;
+      background-color: $accent_color;
+      @include animation(slideInRight, 0.7s);
+
+      img {
+        height: 15px;
+        filter: contrast(0%) saturate(0%) brightness(200%);
+      }
+    }
+  }
+
+  .doctor-description {
+    font-family: 14px;
+    color: $text_color;
+    @include animation(slideInRight, 1s);
+  }
+}
+
+.doctor-image {
+  height: 520px;
+  margin-bottom: auto;
+  margin-top: auto;
+  @include animation(blurIn, 0.5s);
+}
+
+@media (max-width: 1030px) {
+  .doctor-section {
+    padding-top: 10px;
+  }
+
+  .doctor-content {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .doctor-text {
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 70px;
+  }
+
+  .doctor-image {
+    height: auto;
+  }
+}
+
+@media (max-width: 400px) {
+  .doctor-text {
+    .subheading-text {
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 30px;
+    }
+    .doctor-contact {
+      .contact-ring {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}

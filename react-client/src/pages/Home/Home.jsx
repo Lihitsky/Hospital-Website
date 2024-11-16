@@ -3,6 +3,7 @@ import { ContactBar } from "./Sections/ContactBar";
 import { OurDoctors } from "./Sections/OurDoctors";
 import { WhyUs } from "./Sections/WhyUs";
 import { Hero } from "./Sections/Hero";
+import { Feedback } from "../../components/Feedback";
 
 export const Home = () => {
   return (
@@ -13,6 +14,7 @@ export const Home = () => {
         <AboutUs />
         <WhyUs />
         <OurDoctors />
+        {/* <Feedback /> */}
       </div>
     </div>
   );

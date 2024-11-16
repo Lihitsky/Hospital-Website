@@ -1,14 +1,13 @@
 @use "../../styles/color.scss" as *;
 
 .footer-wrapper {
-  border-bottom: 1px solid $border_color;
+  border-top: 1px solid $border_color;
   position: relative;
   background-color: $background_color;
 }
 
 .footer-bar {
   display: flex;
-  border-top: 1px solid $border_color;
   justify-content: space-between;
   padding-top: 20px;
   padding-bottom: 20px;

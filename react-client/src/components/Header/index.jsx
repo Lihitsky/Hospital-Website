@@ -23,30 +23,6 @@ const dropdownItems = [
     title: "Лікарі",
     items: doctorDropdownItems,
   },
-  {
-    id: 2,
-    title: "Пацієнти",
-    items: [
-      { text: "Марія Петренко", href: "/patients/mariya-petrenko" },
-      { text: "Олексій Іванченко", href: "/patients/oleksiy-ivanchenko" },
-      { text: "Катерина Сидорова", href: "/patients/kateryna-sydorova" },
-    ],
-  },
-  {
-    id: 3,
-    title: "Прийоми",
-    items: [
-      {
-        text: "Консультація - 10:00",
-        href: "/appointments/consultation-10am",
-      },
-      {
-        text: "Повторний прийом - 14:00",
-        href: "/appointments/follow-up-2pm",
-      },
-      { text: "Обстеження - 17:30", href: "/appointments/physical-530pm" },
-    ],
-  },
 ];
 
 export const Header = () => {
@@ -94,17 +70,12 @@ export const Header = () => {
             className={`navigation-wrapper ${isBurgerOpen ? "visible" : ""}`}
           >
             <Link text="Головна" href="/" type="header" />
+            <Link text="Про нас" href="/about-us" type="header" />
+            <Link text="Контакти" href="#contact-bar" type="header" />
+
             <DropDownList
               title={dropdownItems[0].title}
               items={dropdownItems[0].items}
-            />
-            <DropDownList
-              title={dropdownItems[1].title}
-              items={dropdownItems[1].items}
-            />
-            <DropDownList
-              title={dropdownItems[2].title}
-              items={dropdownItems[2].items}
             />
             <Button
               text="Зв'язатися з нами"
