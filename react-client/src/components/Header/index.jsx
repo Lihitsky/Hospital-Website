@@ -11,6 +11,7 @@ import TwitterIcon from "../../assets/svg/twitter.svg";
 
 import "./styles.scss";
 import { DOCTORS } from "../../constants/data";
+import { LINKS, TEXT } from "../../constants/common";
 
 const doctorDropdownItems = DOCTORS.map((doctor) => ({
   text: doctor.name,
@@ -34,17 +35,14 @@ export const Header = () => {
         {/* Top Bar */}
         <div className="header-top-bar">
           <div className="contact-info">
-            <a className="contact-info-item" href="tel:123123123">
+            <a className="contact-info-item" href={LINKS.PHONE}>
               <img src={TelIcon} alt="Phone Icon" />
-              <div>(096) 123 - 1234</div>
+              <div>{TEXT.PHONE}</div>
             </a>
 
-            <a
-              className="contact-info-item"
-              href="mailto:chernyahivtmo@gmail.com"
-            >
+            <a className="contact-info-item" href={LINKS.MAIL}>
               <img src={MailIcon} alt="Email Icon" />
-              <div>chernyahivtmo@gmail.com</div>
+              <div>{TEXT.MAIL}</div>
             </a>
           </div>
           <div>
@@ -71,7 +69,7 @@ export const Header = () => {
           >
             <Link text="Головна" href="/" type="header" />
             <Link text="Про нас" href="/about-us" type="header" />
-            <Link text="Контакти" href="#contact-bar" type="header" />
+            <Link text="Контакти" href="/contact" type="header" />
 
             <DropDownList
               title={dropdownItems[0].title}

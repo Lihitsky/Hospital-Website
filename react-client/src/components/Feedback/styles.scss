@@ -1,0 +1,152 @@
+@use "../../styles/color.scss" as *;
+@use "../../styles/animations.scss" as *;
+
+.feedback-section {
+  position: relative;
+  background-color: $background_color;
+
+  .container-default {
+    max-width: 1520px !important;
+  }
+}
+
+.feedback-content {
+  min-height: 820px;
+  display: flex;
+}
+
+.feedback-form {
+  display: block;
+  width: 55%;
+  padding: 40px;
+  box-shadow: 0 -8px 34px rgba(88, 112, 173, 0.08);
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 45px;
+    @include animation(slideInLeft, 1s);
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    color: $text_color;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 34px;
+  }
+
+  input,
+  textarea {
+    display: block;
+    box-sizing: border-box;
+    resize: vertical;
+    color: inherit;
+    font: inherit;
+    margin: 0;
+    outline: none;
+    height: 64px;
+    min-height: 64px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #cad6e1;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+
+  textarea {
+    padding-top: 20px;
+  }
+
+  .error {
+    font-weight: normal;
+    font-size: 12px;
+    color: rgb(255, 80, 80);
+  }
+
+  button {
+    cursor: pointer;
+    padding: 15px 20px;
+    width: fit-content;
+    color: $white_color;
+    text-align: center;
+    border-radius: 4px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 2px solid $accent_color;
+    background-color: $accent_color;
+    transition: border-color 0.3s, transform 0.3s, background-color 0.3s;
+
+    :hover {
+      background-color: $accent_hover_color;
+      border-color: $accent_hover_color;
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.feedback-info {
+  width: 45%;
+  padding: 40px;
+  margin-top: 150px;
+  background-color: #19253e;
+
+  .info-buttons-container {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+    gap: 20px;
+    border-bottom: 1px solid #7c82a1;
+
+    h3 {
+      color: $white_color;
+    }
+  }
+
+  .info-location-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    h4 {
+      color: $white_color;
+      margin-top: 40px;
+    }
+
+    .city {
+      color: #a9cbff;
+      margin-top: 5px;
+      margin-bottom: 0px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .phone,
+    .address {
+      color: $white_color;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .feedback-content {
+    flex-direction: column;
+
+    .feedback-form {
+      width: unset;
+    }
+
+    .feedback-info {
+      width: unset;
+    }
+  }
+}

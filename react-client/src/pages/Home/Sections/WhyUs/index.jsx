@@ -6,7 +6,7 @@ import "./styles.scss";
 
 export const WhyUs = () => {
   return (
-    <div className="why-us-section">
+    <section className="why-us-section">
       <div className="container-default">
         <div className="why-us-content">
           <div className="why-us-text">
@@ -31,6 +31,6 @@ export const WhyUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

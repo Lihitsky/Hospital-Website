@@ -3,6 +3,7 @@ import ScrollToTopButton from "./components/ScrollToTopButton";
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home/Home";
 import { Doctor } from "./pages/Doctor/Doctor";
+import { Contact } from "./pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -12,6 +13,10 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <Home />,
+      },
+      {
+        path: "contact",
+        element: <Contact />,
       },
       {
         path: "doctor/:name",

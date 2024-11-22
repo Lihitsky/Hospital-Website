@@ -6,7 +6,7 @@ import "./styles.scss";
 
 export const AboutUs = () => {
   return (
-    <div className="about-section">
+    <section className="about-section">
       <div className="container-default">
         <div className="about-content">
           <div className="about-text">
@@ -32,6 +32,6 @@ export const AboutUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

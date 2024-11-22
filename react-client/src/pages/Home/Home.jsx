@@ -14,7 +14,7 @@ export const Home = () => {
         <AboutUs />
         <WhyUs />
         <OurDoctors />
-        {/* <Feedback /> */}
+        <Feedback />
       </div>
     </div>
   );

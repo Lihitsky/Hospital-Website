@@ -5,7 +5,7 @@ import "./styles.scss";
 
 export const OurDoctors = () => {
   return (
-    <div className="our-doctors-section">
+    <section className="our-doctors-section">
       <div className="container-default">
         <div className="our-doctors-text">
           <div className="our-doctors-subheading">Наша гордість</div>
@@ -36,6 +36,6 @@ export const OurDoctors = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };

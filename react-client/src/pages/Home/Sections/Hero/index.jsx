@@ -6,7 +6,7 @@ import "./styles.scss";
 
 export const Hero = () => {
   return (
-    <div className="hero-section">
+    <section className="hero-section">
       <div className="container-default">
         <div className="hero-content">
           <div className="hero-text">
@@ -35,6 +35,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };

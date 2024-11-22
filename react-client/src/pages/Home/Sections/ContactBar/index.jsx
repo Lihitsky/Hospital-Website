@@ -6,7 +6,7 @@ import "./styles.scss";
 
 export const ContactBar = () => {
   return (
-    <div className="contact-bar-section">
+    <section className="contact-bar-section">
       <div className="contact-bar-wrapper">
         <div className="contact-bar-container">
           <div className="contact-bar-item">
@@ -28,9 +28,8 @@ export const ContactBar = () => {
             <img src={ClockIcon} className="contact-bar-icon" />
             <div className="contact-bar-info">
               <div className="contact-bar-title">Години роботи</div>
-              <div>Пн - Пт: 8:00 - 20:00</div>
-              <div>Субота: 9:00 - 16:00</div>
-              <div>Неділя: Вихідний</div>
+              <div>Пн - Пт: 8:00 - 16:00</div>
+              <div>Сб - Нд: Вихідний</div>
             </div>
           </div>
           <div className="contact-bar-item">
@@ -50,6 +49,6 @@ export const ContactBar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
