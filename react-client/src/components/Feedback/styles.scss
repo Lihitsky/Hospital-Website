@@ -2,7 +2,6 @@
 @use "../../styles/animations.scss" as *;
 
 .feedback-section {
-  position: relative;
   background-color: $background_color;
 
   .container-default {
@@ -24,7 +23,7 @@
   h1 {
     font-size: 36px;
     margin-bottom: 45px;
-    @include animation(slideInLeft, 1s);
+    @include animation(slideInDown, 1s);
   }
 
   form {
@@ -37,6 +36,7 @@
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 34px;
+    @include animation(slideInDown, 1s);
   }
 
   input,
@@ -59,6 +59,7 @@
     padding-right: 16px;
     font-size: 16px;
     transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    @include animation(slideInDown, 1s);
   }
 
   textarea {
@@ -97,6 +98,7 @@
   padding: 40px;
   margin-top: 150px;
   background-color: #19253e;
+  @include animation(blurIn, 0.5s);
 
   .info-buttons-container {
     display: flex;
@@ -138,6 +140,12 @@
 }
 
 @media (max-width: 800px) {
+  .feedback-section {
+    .container-default {
+      padding: 0 !important;
+    }
+  }
+
   .feedback-content {
     flex-direction: column;
 

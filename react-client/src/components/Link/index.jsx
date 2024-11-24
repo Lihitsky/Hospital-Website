@@ -1,11 +1,9 @@
 import { Link as RouterLink } from "react-router-dom";
 import "./styles.scss";
 
-// Types: header, dropdown, footer, common
-
-export const Link = ({ text, href, type = "common" }) => {
+export const Link = ({ text, href, type = "common", onClick = null }) => {
   return (
-    <RouterLink className={`link ${type}`} to={href}>
+    <RouterLink className={`link ${type}`} to={href} onClick={() => onClick()}>
       {text}
     </RouterLink>
   );

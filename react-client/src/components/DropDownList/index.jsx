@@ -11,6 +11,10 @@ export const DropDownList = ({ title, items }) => {
     setIsOpen(!isOpen);
   };
 
+  const hadleSelectItem = () => {
+    setIsOpen(!isOpen);
+  };
+
   // Закриття списку при кліку поза його межами
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -43,7 +47,13 @@ export const DropDownList = ({ title, items }) => {
       </div>
       <nav className={`dropdown-list ${isOpen ? "visible" : ""}`}>
         {items.map((item, index) => (
-          <Link key={index} text={item.text} href={item.href} type="dropdown" />
+          <Link
+            key={index}
+            text={item.text}
+            href={item.href}
+            type="dropdown"
+            onClick={hadleSelectItem}
+          />
         ))}
       </nav>
     </div>

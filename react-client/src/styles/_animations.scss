@@ -141,7 +141,7 @@
 // Анімації для переміщення
 @keyframes slideInUp {
   0% {
-    transform: translateY(100%);
+    transform: translateY(50%);
     opacity: 0;
   }
   100% {
@@ -152,7 +152,7 @@
 
 @keyframes slideInDown {
   0% {
-    transform: translateY(-100%);
+    transform: translateY(-50%);
     opacity: 0;
   }
   100% {
@@ -163,7 +163,7 @@
 
 @keyframes slideInLeft {
   0% {
-    transform: translateX(-100%);
+    transform: translateX(-50%);
     opacity: 0;
   }
   100% {
@@ -174,7 +174,7 @@
 
 @keyframes slideInRight {
   0% {
-    transform: translateX(100%);
+    transform: translateX(50%);
     opacity: 0;
   }
   100% {

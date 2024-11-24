@@ -22,7 +22,11 @@ export const Hero = () => {
               реабілітації. Ми використовуємо сучасні методи лікування, щоб ваш
               шлях до одужання був безпечним і комфортним.
             </p>
-            <Button text="Детальніше про нас" style={{ marginTop: 15 }} />
+            <Button
+              text="Зв'язатися з нами"
+              href="/contact"
+              style={{ marginTop: 15 }}
+            />
           </div>
           <div className="hero-image-container">
             <div className="hero-bg-object hero-bg-object-1">

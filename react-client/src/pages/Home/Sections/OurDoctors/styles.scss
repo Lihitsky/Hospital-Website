@@ -23,16 +23,19 @@
     font-size: 15px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    @include animation(slideInDown, 0.5s);
   }
 
   .our-doctors-header {
     margin: 0;
+    @include animation(slideInDown, 0.7s);
   }
 
   .our-doctors-description {
     color: $text_color;
     text-align: center;
     max-width: 480px;
+    @include animation(slideInDown, 1s);
   }
 }
 
@@ -48,6 +51,7 @@
     border: 1px solid #f0f5f8;
     border-radius: 8px;
     transition: 0.5s;
+    @include animation(blurIn, 0.7s);
 
     .item-image-container {
       max-height: 440px;
