@@ -5,6 +5,9 @@ import { Home } from "./pages/Home/Home";
 import { Doctor } from "./pages/Doctor/Doctor";
 import { Contact } from "./pages/Contact";
 import { AboutUs } from "./pages/AboutUs";
+import { NewsList } from "./pages/NewsList";
+import { NewsCreate } from "./pages/NewsCreate";
+import { NewsDelete } from "./pages/NewsDelete";
 
 const router = createBrowserRouter([
   {
@@ -26,6 +29,18 @@ const router = createBrowserRouter([
       {
         path: "about-us",
         element: <AboutUs />,
+      },
+      {
+        path: "news",
+        element: <NewsList />,
+      },
+      {
+        path: "news/create",
+        element: <NewsCreate />,
+      },
+      {
+        path: "news/delete",
+        element: <NewsDelete />,
       },
     ],
   },
