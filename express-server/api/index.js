@@ -3,8 +3,8 @@ const bodyParser = require("body-parser");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-const sequelize = require("./models");
-const News = require("./models/News");
+const sequelize = require("../models");
+const News = require("../models/News");
 const fs = require("fs");
 
 const app = express();
