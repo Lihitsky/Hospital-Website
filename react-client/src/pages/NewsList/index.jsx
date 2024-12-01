@@ -31,13 +31,7 @@ export const NewsList = () => {
                 return <p key={index}>{block.content}</p>;
               }
               if (block.type === "image") {
-                return (
-                  <img
-                    key={index}
-                    src={`http://localhost:5000${block.content}`}
-                    alt="News"
-                  />
-                );
+                return <img key={index} src={`${block.content}`} alt="News" />;
               }
               if (block.type === "video") {
                 return (
