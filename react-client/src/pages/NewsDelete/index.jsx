@@ -24,7 +24,7 @@ export const NewsDelete = () => {
   const handleDelete = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`http://localhost:5000/news/${id}`);
+      await axios.delete(`${process.env.SERVER_URL}/news/${id}`);
       setNewsList((prev) => prev.filter((news) => news.id !== id));
       alert("News deleted successfully!");
     } catch (error) {

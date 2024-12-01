@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node ./api/index.js"
   },
   "keywords": [],
   "author": "",
@@ -13,11 +13,12 @@
     "nodemon": "^3.1.7"
   },
   "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.43",
     "body-parser": "^1.20.3",
+    "cloudinary": "^2.5.1",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
     "express": "^4.21.1",
-    "multer": "^1.4.5-lts.1",
-    "sequelize": "^6.37.5",
-    "sqlite3": "^5.1.7"
+    "multer": "^1.4.5-lts.1"
   }
 }

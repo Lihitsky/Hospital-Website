@@ -51,7 +51,7 @@ export const NewsCreate = () => {
     }
 
     try {
-      await axios.post("http://localhost:5000/news", formData, {
+      await axios.post(`${process.env.SERVER_URL}/news`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
