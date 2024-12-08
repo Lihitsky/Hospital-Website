@@ -4,16 +4,16 @@ const Users = require("../models/users");
 
 const SECRET_KEY = process.env.JWT_SECRET;
 
-exports.register = async (req, res) => {
-  try {
-    const { username, password } = req.body;
-    const hashedPassword = await bcrypt.hash(password, 10);
-    const user = await Users.create({ username, password: hashedPassword });
-    res.status(201).json({ message: "User registered successfully" });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
-};
+// exports.register = async (req, res) => {
+//   try {
+//     const { username, password } = req.body;
+//     const hashedPassword = await bcrypt.hash(password, 10);
+//     const user = await Users.create({ username, password: hashedPassword });
+//     res.status(201).json({ message: "User registered successfully" });
+//   } catch (err) {
+//     res.status(500).json({ error: err.message });
+//   }
+// };
 
 exports.login = async (req, res) => {
   try {
