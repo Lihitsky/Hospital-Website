@@ -13,7 +13,9 @@ export const NewsDelete = () => {
 
   const fetchNews = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/news");
+      const response = await axios.get(
+        `${import.meta.env.VITE_SERVER_URL}/news`
+      );
       setNewsList(response.data);
     } catch (error) {
       console.error("Error fetching news:", error);
@@ -24,7 +26,7 @@ export const NewsDelete = () => {
   const handleDelete = async (id) => {
     setLoading(true);
     try {
-      await axios.delete(`${process.env.SERVER_URL}/news/${id}`);
+      await axios.delete(`${import.meta.env.VITE_SERVER_URL}/news/${id}`);
       setNewsList((prev) => prev.filter((news) => news.id !== id));
       alert("News deleted successfully!");
     } catch (error) {

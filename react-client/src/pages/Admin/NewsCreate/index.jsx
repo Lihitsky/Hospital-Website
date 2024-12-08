@@ -42,16 +42,14 @@ export const NewsCreate = () => {
     const formData = new FormData();
     formData.append("title", title);
 
-    // Обробка блоків контенту
     formData.append(`contentBlocks`, JSON.stringify(contentBlocks));
 
-    // Додавання окремих файлів
     for (let file of files) {
       formData.append("files", file);
     }
 
     try {
-      await axios.post(`${process.env.SERVER_URL}/news`, formData, {
+      await axios.post(`${import.meta.env.VITE_SERVER_URL}/news`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -67,7 +65,6 @@ export const NewsCreate = () => {
 
   return (
     <div>
-      <h2>Add News</h2>
       <form onSubmit={handleSubmit}>
         <div>
           <label>Title:</label>

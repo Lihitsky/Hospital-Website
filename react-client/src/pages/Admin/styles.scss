@@ -1,0 +1,60 @@
+@use "../../styles/color.scss" as *;
+
+.admin-menu-wrapper {
+  padding: 30px;
+  margin-top: 30px;
+  min-height: 65vh;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 4px 0 36px rgba(140, 170, 205, 0.2);
+
+  .title {
+    font-size: 32px;
+    color: $titles_color;
+    text-align: center;
+  }
+
+  .content {
+    .empty-data-title {
+      font-size: 16px;
+      color: $text_color;
+      text-align: center;
+      margin-top: 50%;
+    }
+
+    .list {
+      padding-left: 0;
+      list-style-type: none;
+    }
+
+    .list-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      margin-top: 30px;
+      border-radius: 30px;
+      box-shadow: 4px 0 36px rgba(140, 170, 205, 0.2);
+
+      h4 {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin-right: 15px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 10px;
+
+        .action {
+          cursor: pointer;
+
+          :hover {
+            color: $accent_color;
+          }
+        }
+      }
+    }
+  }
+}

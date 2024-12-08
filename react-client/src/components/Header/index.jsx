@@ -12,6 +12,7 @@ import TwitterIcon from "../../assets/svg/twitter.svg";
 import "./styles.scss";
 import { DOCTORS } from "../../constants/data";
 import { LINKS, TEXT } from "../../constants/common";
+import { useNavigate } from "react-router-dom";
 
 const doctorDropdownItems = DOCTORS.map((doctor) => ({
   text: doctor.name,
@@ -27,6 +28,7 @@ const dropdownItems = [
 ];
 
 export const Header = () => {
+  const navigate = useNavigate();
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
 
   return (
@@ -59,7 +61,13 @@ export const Header = () => {
       {/* Nav menu Bar */}
       <div className="container-default">
         <div className="header-bottom-bar">
-          <a href="/" className="logo">
+          <a
+            onClick={(e) => {
+              e.preventDefault();
+              navigate("/");
+            }}
+            className="logo"
+          >
             <b>КНП "Черняхівське ТМО"</b>
             <br />
             ЧЕРНЯХІВСЬКОЇ СЕЛИЩНОЇ РАДИ
