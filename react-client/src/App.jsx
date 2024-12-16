@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { initial } from "./redux/commonReducer";
+import { initial } from "./store/commonReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
+import { useLoadingError } from "./hooks/useLoadingError";
 
 import { Layout } from "./components/Layout";
 import { Home } from "./pages/Home/Home";
@@ -13,9 +14,11 @@ import { Admin } from "./pages/Admin";
 import { NewsList } from "./pages/Admin/NewsList";
 import { NewsCreate } from "./pages/Admin/NewsCreate";
 import { NewsDelete } from "./pages/Admin/NewsDelete";
+import { Login } from "./pages/Admin/Login";
 
 import { Circles } from "react-loader-spinner";
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import { authorization } from "./store/authReducer";
 
 const router = createBrowserRouter([
   {
@@ -47,6 +50,14 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/admin/login",
+        element: (
+          <Admin title="Вхід">
+            <Login />
+          </Admin>
+        ),
+      },
+      {
         path: "admin/news/create",
         element: (
           <Admin title="Створення новини">
@@ -64,11 +75,11 @@ const router = createBrowserRouter([
 
 function App() {
   const dispatch = useDispatch();
-  const isLoading = useSelector((state) => state.common.isLoading);
-  const error = useSelector((state) => state.common.error);
+  const { isLoading, error } = useLoadingError("common", "auth");
 
   useEffect(() => {
     dispatch(initial());
+    dispatch(authorization());
   }, []);
 
   if (isLoading) {

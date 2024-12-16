@@ -1,6 +1,15 @@
-// src/components/AddNews.js
 import { useState } from "react";
 import axios from "axios";
+
+import { LuLetterText } from "react-icons/lu";
+import { LuImagePlus } from "react-icons/lu";
+import { LuVideo } from "react-icons/lu";
+
+const blockTypesLocalization = {
+  text: "Текст",
+  image: "Зображення",
+  video: "Відео",
+};
 
 export const NewsCreate = () => {
   const [title, setTitle] = useState("");
@@ -66,8 +75,8 @@ export const NewsCreate = () => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>Title:</label>
+        <div style={{ marginTop: "25px" }}>
+          <label>Заголовок:</label>
           <input
             type="text"
             value={title}
@@ -77,50 +86,75 @@ export const NewsCreate = () => {
         </div>
 
         {contentBlocks.map((block, index) => (
-          <div key={index}>
-            <label>
-              Block {index + 1} ({block.type}):
-            </label>
-            {block.type === "text" && (
-              <input
-                type="text"
-                value={block.content}
-                onChange={(e) => handleContentChange(index, e)}
-                placeholder="Enter text content"
-                required
-              />
-            )}
-            {block.type === "image" && (
-              <input
-                type="file"
-                accept="image/*"
-                onChange={(e) => handleFileBlockChange(index, e)}
-                required
-              />
-            )}
-            {block.type === "video" && (
-              <input
-                type="text"
-                value={block.content}
-                onChange={(e) => handleContentChange(index, e)}
-                placeholder="Enter video URL"
-                required
-              />
-            )}
-          </div>
+          <ul className="list" key={index}>
+            <li className="list-item">
+              <label style={{ marginBottom: "0px" }}>
+                Секція {index + 1} ({blockTypesLocalization[block.type]}):
+                {block.type === "text" && (
+                  <textarea
+                    value={block.content}
+                    onChange={(e) => handleContentChange(index, e)}
+                    required
+                  />
+                )}
+                {block.type === "image" && (
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => handleFileBlockChange(index, e)}
+                    style={{ marginTop: "15px" }}
+                    required
+                  />
+                )}
+                {block.type === "video" && (
+                  <input
+                    type="text"
+                    value={block.content}
+                    onChange={(e) => handleContentChange(index, e)}
+                    placeholder="Вставте посилання на відео"
+                    required
+                  />
+                )}
+              </label>
+            </li>
+          </ul>
         ))}
 
-        <button type="button" onClick={() => handleAddContentBlock("text")}>
-          Add Text Block
-        </button>
-        <button type="button" onClick={() => handleAddContentBlock("image")}>
-          Add Image Block
-        </button>
-        <button type="button" onClick={() => handleAddContentBlock("video")}>
-          Add Video Block
-        </button>
+        <div
+          style={{
+            display: "flex",
+            gap: "10px",
+            marginTop: "20px",
+            justifyContent: "center",
+          }}
+        >
+          <button
+            className="button secondary"
+            onClick={() => handleAddContentBlock("text")}
+          >
+            <LuLetterText />
+          </button>
+          <button
+            className="button secondary"
+            onClick={() => handleAddContentBlock("image")}
+          >
+            <LuImagePlus />
+          </button>
+          <button
+            className="button secondary"
+            onClick={() => handleAddContentBlock("video")}
+          >
+            <LuVideo />
+          </button>
+        </div>
 
-        <button type="submit">Submit</button>
+        <button
+          className="button primary"
+          style={{ marginTop: "20px", width: "100%" }}
+          type="submit"
+        >
+          Створити
+        </button>
       </form>
     </div>
   );

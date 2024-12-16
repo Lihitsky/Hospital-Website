@@ -62,7 +62,7 @@ export const NewsList = () => {
         )}
       </ul>
       <Button
-        href={"create"}
+        href={"news/create"}
         text={"Створити новину"}
         style={{ width: "100%" }}
       />

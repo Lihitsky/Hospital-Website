@@ -12,6 +12,39 @@
     font-size: 32px;
     color: $titles_color;
     text-align: center;
+    border-bottom: 1px solid #dbe5ee;
+    padding-bottom: 20px;
+  }
+
+  label {
+    color: $text_color;
+    font-size: 16px;
+    margin-bottom: 34px;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  textarea {
+    box-sizing: border-box;
+    resize: vertical;
+    color: inherit;
+    font: inherit;
+    font-weight: normal;
+    margin: 0;
+    outline: none;
+    height: 64px;
+    min-height: 64px;
+    width: 100%;
+    background-color: #fff;
+    border: 1px solid #cad6e1;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  textarea {
+    height: 120px;
   }
 
   .content {
