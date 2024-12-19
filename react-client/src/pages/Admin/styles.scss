@@ -61,12 +61,13 @@
     }
 
     .list-item {
-      display: flex;
+      position: relative;
       justify-content: space-between;
       align-items: center;
+      flex-direction: column;
       padding: 15px 20px;
       margin-top: 30px;
-      border-radius: 30px;
+      border-radius: 20px;
       box-shadow: 4px 0 36px rgba(140, 170, 205, 0.2);
 
       h4 {
@@ -78,6 +79,7 @@
 
       .actions {
         display: flex;
+        margin-top: 15px;
         gap: 10px;
 
         .action {
@@ -88,6 +90,38 @@
           }
         }
       }
+
+      &-delete {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        cursor: pointer;
+
+        :hover {
+          color: $red_color;
+        }
+      }
     }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      gap: 10px;
+
+      button {
+        cursor: pointer;
+        color: $white_color;
+        background-color: $accent_color;
+        padding: 5px 10px;
+        border-width: 0px;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    padding: 20px;
   }
 }

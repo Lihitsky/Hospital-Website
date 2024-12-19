@@ -1,5 +1,4 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { initial } from "./store/commonReducer";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { useLoadingError } from "./hooks/useLoadingError";
@@ -19,6 +18,7 @@ import { Login } from "./pages/Admin/Login";
 import { Circles } from "react-loader-spinner";
 import ScrollToTopButton from "./components/ScrollToTopButton";
 import { authorization } from "./store/authReducer";
+import { fetchNewsThunk } from "./store/newsReducer";
 
 const router = createBrowserRouter([
   {
@@ -75,10 +75,10 @@ const router = createBrowserRouter([
 
 function App() {
   const dispatch = useDispatch();
-  const { isLoading, error } = useLoadingError("common", "auth");
+  const { isLoading, error } = useLoadingError("auth", "news");
 
   useEffect(() => {
-    dispatch(initial());
+    dispatch(fetchNewsThunk());
     dispatch(authorization());
   }, []);
 

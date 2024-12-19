@@ -57,7 +57,6 @@ exports.deleteNews = async (req, res) => {
       return res.status(404).json({ message: "News not found" });
     }
 
-    // Extract and delete images from Cloudinary
     const contentBlocks = news.contentBlocks;
     for (const block of contentBlocks) {
       if (block.type === "image" && block.content) {
@@ -73,9 +72,11 @@ exports.deleteNews = async (req, res) => {
       }
     }
 
-    // Delete news from database
     await news.destroy();
-    res.json({ message: "News and associated images deleted successfully" });
+    res.json({
+      id: id,
+      message: "News and associated images deleted successfully",
+    });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }

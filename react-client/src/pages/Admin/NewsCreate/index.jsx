@@ -1,9 +1,14 @@
 import { useState } from "react";
-import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import { createNewsThunk } from "../../../store/newsReducer";
+import { useDispatch } from "react-redux";
+
+import { create as createNews } from "../../../api/newsApi";
 
 import { LuLetterText } from "react-icons/lu";
 import { LuImagePlus } from "react-icons/lu";
 import { LuVideo } from "react-icons/lu";
+import { GoTrash } from "react-icons/go";
 
 const blockTypesLocalization = {
   text: "Текст",
@@ -12,6 +17,8 @@ const blockTypesLocalization = {
 };
 
 export const NewsCreate = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [title, setTitle] = useState("");
   const [contentBlocks, setContentBlocks] = useState([]);
   const [files, setFiles] = useState([]);
@@ -20,6 +27,20 @@ export const NewsCreate = () => {
 
   const handleAddContentBlock = (type) => {
     setContentBlocks([...contentBlocks, { type, content: "" }]);
+  };
+
+  const handleDeleteContentBlock = (index) => {
+    const result = window.confirm("Ви впевнені, що хочете видалити цю секцію?");
+
+    if (result) {
+      const updatedBlocks = contentBlocks.filter((_, i) => i !== index);
+      setContentBlocks(updatedBlocks);
+
+      const fileName = contentBlocks[index]?.content;
+      if (fileName && files.length > 0) {
+        setFiles(files.filter((file) => file.name !== fileName));
+      }
+    }
   };
 
   const handleContentChange = (index, event) => {
@@ -48,6 +69,11 @@ export const NewsCreate = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
+    if (contentBlocks.length === 0) {
+      alert("Будь-ласка, додайте хоча б одну секцію.");
+      return;
+    }
+
     const formData = new FormData();
     formData.append("title", title);
 
@@ -58,18 +84,24 @@ export const NewsCreate = () => {
     }
 
     try {
-      await axios.post(`${import.meta.env.VITE_SERVER_URL}/news`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-        },
-      });
-      alert("News added successfully!");
-      setTitle("");
-      setContentBlocks([]);
-      setFiles([]);
+      dispatch(createNewsThunk(formData))
+        .unwrap()
+        .then(() => {
+          navigate("/admin");
+        });
     } catch (error) {
       console.error("Error adding news:", error);
     }
+  };
+
+  const handleCancel = () => {
+    if (title || contentBlocks.length !== 0 || files.length !== 0) {
+      const result = confirm(
+        "Ви дійсно хочете вийти? Всі данні будуть втрачені."
+      );
+      if (!result) return;
+    }
+    navigate(-1);
   };
 
   return (
@@ -87,35 +119,41 @@ export const NewsCreate = () => {
 
         {contentBlocks.map((block, index) => (
           <ul className="list" key={index}>
-            <li className="list-item">
+            <li className="list-item" style={{ alignItems: "flex-start" }}>
               <label style={{ marginBottom: "0px" }}>
                 Секція {index + 1} ({blockTypesLocalization[block.type]}):
-                {block.type === "text" && (
-                  <textarea
-                    value={block.content}
-                    onChange={(e) => handleContentChange(index, e)}
-                    required
-                  />
-                )}
-                {block.type === "image" && (
-                  <input
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => handleFileBlockChange(index, e)}
-                    style={{ marginTop: "15px" }}
-                    required
-                  />
-                )}
-                {block.type === "video" && (
-                  <input
-                    type="text"
-                    value={block.content}
-                    onChange={(e) => handleContentChange(index, e)}
-                    placeholder="Вставте посилання на відео"
-                    required
-                  />
-                )}
               </label>
+              <div
+                className="list-item-delete"
+                onClick={() => handleDeleteContentBlock(index)}
+              >
+                <GoTrash />
+              </div>
+              {block.type === "text" && (
+                <textarea
+                  value={block.content}
+                  onChange={(e) => handleContentChange(index, e)}
+                  required
+                />
+              )}
+              {block.type === "image" && (
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => handleFileBlockChange(index, e)}
+                  style={{ marginTop: "15px", maxWidth: "222px" }}
+                  required
+                />
+              )}
+              {block.type === "video" && (
+                <input
+                  type="text"
+                  value={block.content}
+                  onChange={(e) => handleContentChange(index, e)}
+                  placeholder="Вставте посилання на відео"
+                  required
+                />
+              )}
             </li>
           </ul>
         ))}
@@ -154,6 +192,13 @@ export const NewsCreate = () => {
           type="submit"
         >
           Створити
+        </button>
+        <button
+          className="button cancel"
+          style={{ marginTop: "20px", width: "100%" }}
+          onClick={handleCancel}
+        >
+          Назад
         </button>
       </form>
     </div>

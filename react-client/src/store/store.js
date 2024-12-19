@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import commonReducer from "./commonReducer";
+import newsReducer from "./newsReducer";
 import authReducer from "./authReducer";
 
 const store = configureStore({
   reducer: {
-    common: commonReducer,
+    news: newsReducer,
     auth: authReducer,
   },
 });
