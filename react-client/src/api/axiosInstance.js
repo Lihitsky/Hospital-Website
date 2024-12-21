@@ -4,9 +4,6 @@ const API_BASE_URL = import.meta.env.VITE_SERVER_URL;
 
 const axiosInstance = axios.create({
   baseURL: API_BASE_URL,
-  headers: {
-    "Content-Type": "application/json",
-  },
 });
 
 axiosInstance.interceptors.request.use(

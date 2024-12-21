@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { createNewsThunk } from "../../../store/newsReducer";
 import { useDispatch } from "react-redux";
 
-import { create as createNews } from "../../../api/newsApi";
-
 import { LuLetterText } from "react-icons/lu";
 import { LuImagePlus } from "react-icons/lu";
 import { LuVideo } from "react-icons/lu";

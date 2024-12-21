@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const sequelize = require("../config/database");
+const multer = require("multer");
 
 const authRoutes = require("../routes/auth");
 const newsRoutes = require("../routes/news");
@@ -12,13 +13,14 @@ require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 5000;
+const upload = multer();
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use("/auth", authRoutes);
-app.use("/news", newsRoutes);
+app.use("/news", upload.array("files"), newsRoutes);
 
 sequelize
   .authenticate()

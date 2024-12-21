@@ -5,7 +5,6 @@ export const get = async () => {
 };
 
 export const create = async (data) => {
-  axiosInstance.defaults.headers.post["Content-Type"] = "multipart/form-data";
   return axiosInstance.post("/news", data);
 };
 

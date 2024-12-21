@@ -14,11 +14,15 @@ export const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    dispatch(loginThunk({ username, password }))
-      .unwrap()
-      .then(() => {
-        navigate("/admin");
-      });
+    try {
+      dispatch(loginThunk({ username, password }))
+        .unwrap()
+        .then(() => {
+          navigate("/admin");
+        });
+    } catch (error) {
+      console.error("Error logging in:", error);
+    }
   };
 
   return (

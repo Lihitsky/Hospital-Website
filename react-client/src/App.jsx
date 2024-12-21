@@ -75,7 +75,7 @@ const router = createBrowserRouter([
 
 function App() {
   const dispatch = useDispatch();
-  const { isLoading, error } = useLoadingError("auth", "news");
+  const { isLoading } = useLoadingError("auth", "news");
 
   useEffect(() => {
     dispatch(fetchNewsThunk());
@@ -103,10 +103,6 @@ function App() {
         />
       </div>
     );
-  }
-
-  if (error) {
-    return <p>Error: {error}</p>;
   }
 
   return (

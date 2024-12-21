@@ -12,9 +12,12 @@ exports.createNews = async (req, res) => {
         const file = files.find((f) => f.originalname === block.content);
         if (file) {
           const optimizedBuffer = await optimizeImage(file.buffer);
-          const uploadResult = await cloudinary.uploader.upload_stream_promise({
-            folder: "news_images",
-          })(optimizedBuffer);
+          const uploadResult = await cloudinary.uploader.upload(
+            `data:image/jpeg;base64,${optimizedBuffer.toString("base64")}`,
+            {
+              folder: "news_images",
+            }
+          );
           block.content = uploadResult.secure_url;
         }
       }
